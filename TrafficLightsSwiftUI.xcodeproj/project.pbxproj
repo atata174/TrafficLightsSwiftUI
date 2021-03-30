@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6758F57B26132FC0007D5989 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758F57A26132FC0007D5989 /* ButtonView.swift */; };
 		676DCC00260FCED40007FFD4 /* TrafficLightsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DCBFF260FCED40007FFD4 /* TrafficLightsSwiftUIApp.swift */; };
 		676DCC02260FCED40007FFD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DCC01260FCED40007FFD4 /* ContentView.swift */; };
 		676DCC04260FCED50007FFD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676DCC03260FCED50007FFD4 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6758F57A26132FC0007D5989 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		676DCBFC260FCED40007FFD4 /* TrafficLightsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLightsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676DCBFF260FCED40007FFD4 /* TrafficLightsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightsSwiftUIApp.swift; sourceTree = "<group>"; };
 		676DCC01260FCED40007FFD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				676DCBFF260FCED40007FFD4 /* TrafficLightsSwiftUIApp.swift */,
 				676DCC01260FCED40007FFD4 /* ContentView.swift */,
 				676DCC0F260FD5450007FFD4 /* TrafficLights.swift */,
+				6758F57A26132FC0007D5989 /* ButtonView.swift */,
 				676DCC03260FCED50007FFD4 /* Assets.xcassets */,
 				676DCC08260FCED50007FFD4 /* Info.plist */,
 				676DCC05260FCED50007FFD4 /* Preview Content */,
@@ -143,6 +146,7 @@
 			files = (
 				676DCC02260FCED40007FFD4 /* ContentView.swift in Sources */,
 				676DCC10260FD5450007FFD4 /* TrafficLights.swift in Sources */,
+				6758F57B26132FC0007D5989 /* ButtonView.swift in Sources */,
 				676DCC00260FCED40007FFD4 /* TrafficLightsSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

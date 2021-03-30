@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var buttonText = "START"
+    
     @State private var tapCount = 0
+    
     @State private var redOpacity = 0.3
     @State private var yellowOpacity  = 0.3
     @State private var greenOpacity  = 0.3
@@ -22,52 +24,42 @@ struct ContentView: View {
             VStack{
                 trafficLightsSetup
                 Spacer()
-                buttonSetup
+                ButtonView(title: buttonText, action: colorSetup)
             }
         }
     }
     
     var trafficLightsSetup: some View {
         VStack {
-            TrafficLights(color: .red).opacity(redOpacity)
-            TrafficLights(color: .yellow).opacity(yellowOpacity)
-            TrafficLights(color: .green).opacity(greenOpacity)
+            TrafficLights(color: .red, opacity: redOpacity)
+            TrafficLights(color: .yellow, opacity: yellowOpacity)
+            TrafficLights(color: .green, opacity: greenOpacity)
         }
+    }
+    
+    private func colorSetup() {
         
+        tapCount += 1
+        
+        let lightIsOn = 1.0
+        let lightIsOff = 0.3
+        
+        if tapCount == 1 {
+            redOpacity = lightIsOn
+            yellowOpacity = lightIsOff
+            greenOpacity = lightIsOff
+            buttonText = "NEXT"
+        } else if tapCount == 2 {
+            redOpacity = lightIsOff
+            yellowOpacity = lightIsOn
+            greenOpacity = lightIsOff
+        } else if tapCount == 3 {
+            redOpacity = lightIsOff
+            yellowOpacity = lightIsOff
+            greenOpacity = lightIsOn
+            tapCount = 0
+        }
     }
-    var buttonSetup: some View {
-        Button(action: {
-            tapCount += 1
-                if tapCount == 1 {
-                    redOpacity = 1
-                    yellowOpacity = 0.3
-                    greenOpacity = 0.3
-                    buttonText = "NEXT"
-                } else if tapCount == 2 {
-                    redOpacity = 0.3
-                    yellowOpacity = 1
-                    greenOpacity = 0.3
-                } else if tapCount == 3 {
-                    redOpacity = 0.3
-                    yellowOpacity = 0.3
-                    greenOpacity = 1
-                    tapCount = 0
-                }
-        }, label: {
-            Text(buttonText)
-                .font(.headline)
-        })
-        .frame(width: 150, height: 50)
-        .foregroundColor(Color.white)
-        .background(Color.blue)
-        .cornerRadius(20)
-        .overlay(Capsule(style: .continuous)
-                    .stroke(Color.white,
-                            style: StrokeStyle(lineWidth: 5))
-                )
-        .padding()
-    }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
